@@ -1,4 +1,4 @@
-version: "3"
+version: "2"
 
 services:
   glances:
@@ -10,4 +10,4 @@ services:
     restart: always
     pid: "host"
     environment:
-      - GLANCES_OPT="-w"
+      - GLANCES_OPT=-w
