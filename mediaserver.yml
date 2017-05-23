@@ -25,5 +25,6 @@ services:
       - "8989:8989"
     volumes:
       - ./downloads:/downloads:rw
+      - ./sonarr_downloads:/tv:rw
       - ./conf/sonarrsonarr:/config:rw
       - /etc/localtime:/etc/localtime:ro
