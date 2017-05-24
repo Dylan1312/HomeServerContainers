@@ -28,3 +28,18 @@ services:
       - ./sonarr_downloads:/tv:rw
       - ./conf/sonarrsonarr:/config:rw
       - /etc/localtime:/etc/localtime:ro
+
+  plex:
+    image: linuxserver/plex
+    restart: always
+    volumes:
+      - ./downloads:/data
+      - ./config/plex:/plex
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "32400:32400"
+      - "32400:32400/udp"
+      - "32469:32469"
+      - "32469:32469/udp"
+      - "5353:5353/udp"
+      - "1900:1900/udp"
