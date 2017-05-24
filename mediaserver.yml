@@ -29,6 +29,15 @@ services:
       - ./conf/sonarrsonarr:/config:rw
       - /etc/localtime:/etc/localtime:ro
 
+  radarr:
+    image:   linuxserver/radarr
+    restart: always
+    ports:
+      - "7878:7878"
+    volumes:
+      - ./downloads:/downloads:rw
+      - ./conf/radarr:/config:rw
+      - /etc/localtime:/etc/localtime:ro
   plex:
     image: linuxserver/plex
     restart: always
