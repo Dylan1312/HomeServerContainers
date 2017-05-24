@@ -9,5 +9,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     restart: always
     pid: "host"
+    privileged: true
     environment:
       - GLANCES_OPT=-w
